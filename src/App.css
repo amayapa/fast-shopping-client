@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Comic Neue";
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bg-color);
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #6e6e70;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: #b8b8b8;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #6e6e70;
+  outline: none;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+*::-webkit-scrollbar {
+  width: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+*::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: #b8b8b8;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #6e6e70;
+  outline: none;
+  border-radius: 10px;
 }
