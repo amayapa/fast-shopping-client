@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fast-shopping-client/static/css/main.29b26ada.chunk.css",
+    "main.js": "/fast-shopping-client/static/js/main.34edbd07.chunk.js",
+    "main.js.map": "/fast-shopping-client/static/js/main.34edbd07.chunk.js.map",
+    "runtime-main.js": "/fast-shopping-client/static/js/runtime-main.0ca8c479.js",
+    "runtime-main.js.map": "/fast-shopping-client/static/js/runtime-main.0ca8c479.js.map",
+    "static/js/2.6dfa9ee4.chunk.js": "/fast-shopping-client/static/js/2.6dfa9ee4.chunk.js",
+    "static/js/2.6dfa9ee4.chunk.js.map": "/fast-shopping-client/static/js/2.6dfa9ee4.chunk.js.map",
+    "static/js/3.334e70ca.chunk.js": "/fast-shopping-client/static/js/3.334e70ca.chunk.js",
+    "static/js/3.334e70ca.chunk.js.map": "/fast-shopping-client/static/js/3.334e70ca.chunk.js.map",
+    "index.html": "/fast-shopping-client/index.html",
+    "static/css/main.29b26ada.chunk.css.map": "/fast-shopping-client/static/css/main.29b26ada.chunk.css.map",
+    "static/js/2.6dfa9ee4.chunk.js.LICENSE.txt": "/fast-shopping-client/static/js/2.6dfa9ee4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ca8c479.js",
+    "static/js/2.6dfa9ee4.chunk.js",
+    "static/css/main.29b26ada.chunk.css",
+    "static/js/main.34edbd07.chunk.js"
+  ]
+}
