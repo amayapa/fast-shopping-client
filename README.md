@@ -1,4 +1,4 @@
-# Fast Shopping <img src="https://github.com/larts85/fast-shopping-client/blob/master/public/shopping-cart.svg" width="50px" />
+# Fast Shopping <a href='https://larts85.github.io/fast-shopping-client'><img src="https://github.com/larts85/fast-shopping-client/blob/master/public/shopping-cart.svg" width="50px" /></a>
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and some other technologies. It is a simple shopping cart.
 
@@ -8,7 +8,7 @@
 - /categories
 - /orders
 
-### **\*The frontend will be hosting using **GH-Pages** soon. Now you can clone and install this repo and then start the client\***
+### **\*The frontend is hosting using **GH-Pages\*\* at this <a href='https://larts85.github.io/fast-shopping-client'>URL</a>.
 
 #### TECHNOLOGIES
 
