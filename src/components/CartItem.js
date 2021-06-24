@@ -9,7 +9,6 @@ import {
   SecondHalf,
   PriceWrapper,
 } from "../styles/cartItem";
-import { IconButton } from "@material-ui/core";
 import DeleteForeverSharpIcon from "@material-ui/icons/DeleteForeverSharp";
 import { useHistory } from "react-router";
 import { useDispatch, useSelector } from "react-redux";

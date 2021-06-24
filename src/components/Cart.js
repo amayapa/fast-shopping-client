@@ -74,7 +74,7 @@ const Cart = ({ darkMode, rounded }) => {
       email: formRows.email.value,
     };
     const orderlines = [];
-    cart.map(({ productsId, quantity, subTotal }) => {
+    cart.forEach(({ productsId, quantity, subTotal }) => {
       orderlines.push({ productsId, quantity, subTotal });
     });
     finishOrder({
