@@ -15,9 +15,14 @@ const Pagination = ({ pagination, mode }) => {
   return (
     <>
       <TablePagination
-        style={{ color: Theme[mode].colors.text }}
+        style={{
+          color: Theme[mode].colors.text,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         labelRowsPerPage="Products per page"
-        rowsPerPageOptions={[20]}
+        rowsPerPageOptions={[5, 10, 15, 20]}
         component="div"
         count={productsQuantity}
         rowsPerPage={rowsPerPage}

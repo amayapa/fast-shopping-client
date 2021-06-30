@@ -13,7 +13,7 @@ import { Theme } from "./styles/globalStyles";
 
 function App() {
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(20);
+  const [rowsPerPage, setRowsPerPage] = useState(15);
   const [darkMode, setDarkMode] = useState(getInitialMode());
   const [rounded, setRounded] = useState(getInitialBorder());
 
@@ -25,6 +25,7 @@ function App() {
     localStorage.setItem("dark", JSON.stringify(darkMode));
     body.style.setProperty("--bg-color", Theme[mode].colors.bgPrimary);
     body.style.setProperty("--text-color", Theme[mode].colors.text);
+    // eslint-disable-next-line
   }, [darkMode]);
 
   useEffect(() => {

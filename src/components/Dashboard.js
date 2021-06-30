@@ -1,31 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import Board from "../styles/dashboard";
+import Board, { CardsWrapper } from "../styles/dashboard";
 import ProductCard from "./ProductCard";
 import { fetchAllProducts } from "../api/products";
 import { useDispatch, useSelector } from "react-redux";
 import { setAllProducts } from "../store/products/products.actions";
+import { filterProducts } from "../utils/pagination";
+import Pagination from "./Pagination";
 
 const Dashboard = (props) => {
   const { pagination, darkMode, rounded } = props;
-  const { page, rowsPerPage } = pagination;
+  const { handleChangePage, handleChangeRowsPerPage, page, rowsPerPage } =
+    pagination;
+  const { products: storeProducts } = useSelector((state) => state.products);
+  const [products, setProducts] = useState([]);
 
   const dispatch = useDispatch();
-  const { products } = useSelector((state) => state.products);
 
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  useEffect(() => {
-    setFilteredProducts(
-      products.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-    );
-  }, [products, page, rowsPerPage]);
+  const filteredProducts = useMemo(
+    () => filterProducts(products, page, rowsPerPage),
+    // eslint-disable-next-line
+    [page, products]
+  );
 
   useEffect(() => {
     fetchAllProducts()
       .then(({ data }) => {
         dispatch(setAllProducts(data));
+        if (data.length) {
+          setProducts(data);
+        } else {
+          setProducts(storeProducts);
+        }
       })
       .catch((err) => {
         throw err;
@@ -39,16 +46,28 @@ const Dashboard = (props) => {
         <title>Products List</title>
       </Helmet>
       <Board mode={darkMode} rounded={rounded}>
-        {filteredProducts.map((product, index) => {
-          return (
-            <ProductCard
-              productData={product}
-              key={index}
-              darkMode={darkMode}
-              rounded={rounded}
-            />
-          );
-        })}
+        <Pagination
+          mode={darkMode}
+          pagination={{
+            productsQuantity: products?.length,
+            handleChangePage,
+            handleChangeRowsPerPage,
+            page,
+            rowsPerPage,
+          }}
+        />
+        <CardsWrapper>
+          {filteredProducts.map((product) => {
+            return (
+              <ProductCard
+                productData={product}
+                key={product.id}
+                darkMode={darkMode}
+                rounded={rounded}
+              />
+            );
+          })}
+        </CardsWrapper>
       </Board>
     </>
   );
