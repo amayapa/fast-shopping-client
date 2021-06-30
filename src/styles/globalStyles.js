@@ -56,7 +56,7 @@ const Theme = {
   },
 };
 
-const footerHg = "100px";
+const footerHg = "75px";
 const navBarHg = "100px";
 const pngShadow = "drop-shadow(2px 2px 3px rgb(0, 0, 0))";
 
