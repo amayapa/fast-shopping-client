@@ -21,7 +21,7 @@
 ## First Steps
 
 - Open a console and clone this repo.
-- run npm i and and npm start at client folder, this will consume the api hosted at <a href='https://heroku.com'>Heroku<a/>.
+- run npm i and npm start at client folder, this will consume the api hosted at <a href='https://heroku.com'>Heroku<a/>.
 - if you want to use the api in localhost you need to clone the api repo (https://github.com/larts85/fast-shopping-api.git) then run npm install, npm start, and chage the API_PATH in the config file to localhost.
 
 Frontend is running in localhost 3000 while backend does at port 4000.
