@@ -2,7 +2,7 @@
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and some other technologies. It is a simple shopping cart.
 
-### **_You can visit the API at this <a href='https://fast-shopping-cart.herokuapp.com/'>URL</a> and checkout this routes_**
+### **_You can visit the API at this <a href='https://ultra-fast-shopping.herokuapp.com/'>URL</a> and checkout this routes_**
 
 - /products
 - /categories
